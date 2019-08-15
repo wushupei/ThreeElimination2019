@@ -162,7 +162,7 @@ public class CellController : MonoBehaviour, IPointerDownHandler, IPointerExitHa
         imageType = Random.Range(0, 20) < 1 ? 0 : Random.Range(1, mg.imageAssets.Length);
         Vector3 createPos; //生成图片位置
         //如果不在最下面
-        if (y < cells.GetLength(1) - 1)
+        if (y < cells.GetLength(0) - 1)
         {
             Transform image = cells[y + 1, x].transform.GetChild(0); //得到下面格子的图片
             //如果下面的图片在格子中,则生成位置在第一行格子上方,否则生成在下面的图片上方
